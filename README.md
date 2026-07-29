@@ -6,4 +6,4 @@ This repository is being built incrementally to demonstrate domain modelling, pa
 
 ## Status
 
-The project currently includes strict money and invoice models with tested outstanding-balance calculations.
+The project currently includes strict money and invoice models, payment-aware balance calculations and configurable reminder decisions with explicit skip reasons.
