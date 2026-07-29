@@ -6,4 +6,18 @@ This repository is being built incrementally to demonstrate domain modelling, pa
 
 ## Status
 
-The project currently includes strict financial models, configurable reminder decisions, batch planning and asynchronous delivery orchestration with deterministic idempotency keys.
+The project includes financial domain models, configurable reminder decisions, batch processing, delivery orchestration and runnable in-memory adapters.
+
+## Run locally
+
+```bash
+npm install
+npm run check
+npm run example
+```
+
+## Example
+
+The example uses in-memory adapters. It does not send real email or connect to a database.
+
+It runs the same batch twice to demonstrate reminder history and deterministic idempotency keys.

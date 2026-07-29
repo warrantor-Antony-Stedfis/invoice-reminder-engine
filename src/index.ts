@@ -1,3 +1,5 @@
+export * from './adapters/in-memory-reminder-history-store.js';
+export * from './adapters/in-memory-reminder-sender.js';
 export * from './application/build-reminder-plan.js';
 export * from './application/process-reminders.js';
 export * from './domain/invoice.js';
