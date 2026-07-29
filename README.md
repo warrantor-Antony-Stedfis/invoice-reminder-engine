@@ -10,6 +10,8 @@ The project includes financial domain models, configurable reminder decisions, b
 
 ## Run locally
 
+Requires Node.js 22 or newer.
+
 ```bash
 npm install
 npm run check
