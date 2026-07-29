@@ -6,6 +6,7 @@ import {
   type ReminderSkipReason,
   type ReminderStage,
 } from '../domain/reminder-policy.js';
+import { assertValidInvoiceBatch } from './assert-valid-invoice-batch.js';
 
 export type SentStagesByInvoice = ReadonlyMap<
   string,
@@ -39,19 +40,7 @@ export type BuildReminderPlanInput = Readonly<{
 export function buildReminderPlan(
   input: BuildReminderPlanInput,
 ): ReminderPlan {
-  const invoiceIds = new Set<string>();
-
-  for (const invoice of input.invoices) {
-    if (!invoice.id.trim()) {
-      throw new Error('Invoice id must not be empty');
-    }
-
-    if (invoiceIds.has(invoice.id)) {
-      throw new Error(`Duplicate invoice id: ${invoice.id}`);
-    }
-
-    invoiceIds.add(invoice.id);
-  }
+  assertValidInvoiceBatch(input.invoices);
 
   const skippedByReason: Record<ReminderSkipReason, number> = {
     'reminders-disabled': 0,
