@@ -6,4 +6,4 @@ This repository is being built incrementally to demonstrate domain modelling, pa
 
 ## Status
 
-Work in progress. The initial commit contains only the TypeScript project foundation.
+The project currently includes strict money and invoice models with tested outstanding-balance calculations.
